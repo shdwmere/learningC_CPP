@@ -39,9 +39,9 @@ void como_jogar() {
     std::cout << "\n****************\n\n";
     char tabuleiro_exemplo[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     std::cout << "Como jogar:\n\n";
-    std::cout << "Jogo feito para duas pessoas jogarem, o programa espera um input da linha e coluna desejada.\n\n";
+    std::cout << "Jogo feito para duas pessoas jogarem, mas tambem pode ser jogado contra CPU. O programa espera um input da celula desejada.\n\n";
     std::cout << "O tabuleiro é representado por uma matriz 3x3, onde as posições são indexadas de 0 a 2. No entanto, o jogador escolhe uma célula usando números de 1 a 9.\n\n";
-    std::cout << "Jogador X, escolha uma celula [1-9]: 2\n";
+    std::cout << "[Exemplo]: Jogador X, escolha uma celula [1-9]: 2\n";
     
     tabuleiro_exemplo[0][1] = 'X';
 
@@ -175,7 +175,7 @@ void jogada_cpu() {
     } while (tabuleiro[row][col] != ' ');
 
     tabuleiro[row][col] = 'O';
-    std::cout << "CPU escolheu a celula " << escolha << "\n";
+    std::cout << "\nCPU escolheu a celula " << escolha << "\n";
 }
 
 void iniciar_jogo(bool vs_cpu = false) {
