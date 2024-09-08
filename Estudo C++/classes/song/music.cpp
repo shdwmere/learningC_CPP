@@ -3,13 +3,11 @@
 
 int main() {
 
-  Song electric_relaxation;
-
-  // accessing methods
-  electric_relaxation.add_title("Electric Relaxation\n");
-  std::cout << electric_relaxation.get_title();
+  // instantiating a new object from Song
+  Song backToBlack("Back to Black", "Amy Winehouse");
   
-  electric_relaxation.add_artist("A Tribe Called Quest");
-  std::cout << electric_relaxation.get_artist();
-
+  // accessing methods
+  std::cout << backToBlack.get_artist() << std::endl;
+  std::cout << backToBlack.get_title();
+  
 }

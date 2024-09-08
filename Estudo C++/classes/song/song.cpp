@@ -1,26 +1,32 @@
 #include "song.hpp"
+#include <iostream>
 
-// add Song method definitions here:
-void Song::add_title(std::string new_title) {
+/*
+alternativamente, pode-se criar um constructor da seguinte forma:
 
-  title = new_title;
+  Song::Song(std::string new_title, std::string new_artist) {
+      title = new_title;
+      artist = new_artist;
+  }
+*/
 
+// Song constructor:
+Song::Song(std::string new_title, std::string new_artist)
+    : title(new_title), artist(new_artist) {}
+
+// Song destructor:
+Song::~Song() {
+  std::cout << "\n\n" << "Goodbye " << title << "\n";
 }
 
-std::string Song::get_title() {
+std::string Song::get_title()
+{
 
   return title;
-
 }
 
-void Song::add_artist(std::string new_artist) {
-
-  artist = new_artist;
-
-}
-
-std::string Song::get_artist() {
+std::string Song::get_artist()
+{
 
   return artist;
-
 }

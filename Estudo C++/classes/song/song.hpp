@@ -7,9 +7,13 @@ class Song {
   std::string artist;
 
 public:
-  void add_title(std::string new_title);
+  // Add a constructor here:
+  Song(std::string new_title, std::string new_artist);
+  // Add a destructor here:
+  ~Song();
+  
   std::string get_title();
-  void add_artist(std::string new_artist);
+  
   std::string get_artist();
   
 };
